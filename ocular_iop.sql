@@ -1,0 +1,37 @@
+select 
+concat ('<<deployment_id>>', '-',cast(ocular_iop_id as varchar) ) as vho_ocular_iop_id,
+concat('<<deployment_id>>', '-',cast(patientid as varchar))   as vho_patient_id,
+patient_id,
+concat('<<deployment_id>>'','-',cast(encounterid as varchar)) as vho_encounter_id,
+encounter_id, 
+dos,
+laterality,
+time_taken,
+method,
+value, 
+correction, 
+notes, 
+time_taken_src, 
+concat('<<deployment_id>>'','-',cast(provider_id as varchar)) as vho_provider_id,
+provider_id, 
+source_table, 
+' ' as vh_projection_set_id,
+' ' as dos_src,
+' ' as vh_location_id,
+' ' as vh_ehr_id,
+' ' as vh_practice_id,
+' ' as vh_etl_id,
+' ' as vh_pull_id,
+time_taken_mod, 
+source_field, 
+dos_src, 
+end_date, 
+reason", 
+result_date, 
+start_date, 
+vh_registry_id, 
+vh_deployment_id from
+
+(
+subquery
+)
